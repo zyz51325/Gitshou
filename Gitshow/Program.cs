@@ -12,7 +12,6 @@ namespace ConsoleApp1
                 Console.WriteLine(array[i]);
             }
             int max = array[0] ;
-
             for (int i = 1; i < array.Length; i++)
             {
                 if (array[i] > max)
