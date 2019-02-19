@@ -1,14 +1,29 @@
 ﻿using System;
 
-namespace Gitshow
+namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            //改一点吧哈哈
-            //飞哥搞破坏
+            int[] array = new[] { 299, 11, 2334, 555 };
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            int max = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > max)
+
+                {
+                    max = array[i];
+                }
+            }
+            Console.WriteLine(max);
+
+            Console.Read();
         }
     }
 }
