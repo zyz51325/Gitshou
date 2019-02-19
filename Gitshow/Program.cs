@@ -11,9 +11,9 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(array[i]);
             }
-            int max = 0;
+            int max = array[0] ;
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length-1; i++)
             {
                 if (array[i] > max)
 
@@ -21,7 +21,7 @@ namespace ConsoleApp1
                     max = array[i];
                 }
             }
-            Console.WriteLine(max);
+            Console.WriteLine("最大值:"+max);
 
             Console.Read();
         }
