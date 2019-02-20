@@ -7,10 +7,10 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int[] array = new[] { 29, 11, 34, 55, 99, 65 };
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine(array[i]);
-            }
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    Console.WriteLine(array[i]);
+            //}
             int max = array[0];
 
             for (int i = 1; i < array.Length; i++)
