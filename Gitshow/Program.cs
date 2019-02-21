@@ -27,32 +27,32 @@ namespace ConsoleApp1
             //    }
             //}
             //Console.WriteLine("因此最大值为" + max);
-            int random =new Random().Next(1000);
+            int random =new Random().Next(100);
             int input = 0;
-            for (int i = 1; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
 
                 Console.WriteLine("请输入一个数:");
-
                 string strInput = Console.ReadLine();
                 input = Convert.ToInt32(strInput);
 
                 if (input == random)
                 {
-                    Console.WriteLine("答对了，就是正确答案");
-                    
-
+                    Console.WriteLine("答对了，就是正确答案"); 
                 }
                 else if (input < random)
                 {
-                    Console.WriteLine($"第{i}次比较:数值小了");
+                    Console.WriteLine($"第{i+1}次比较:数值小了");
                 }
                 else
                 {
-                    Console.WriteLine($"第{i}次比较:数值大了");
-                }
+                    Console.WriteLine($"第{i+1}次比较:数值大了");
+                } 
             }
-                Console.ReadLine();
+            if (input != random)
+            Console.WriteLine("你这个笨蛋，这都猜不对");
+
+            Console.ReadLine();
             
        
         }
