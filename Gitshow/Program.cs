@@ -2,42 +2,130 @@
 //using CQ = China.Chongqing;
 //using TW = China.Taiwan;                      //引用类型放在堆里面，值类型有可能在堆里有可能在栈里
 
-namespace China.meinv
+namespace Junior
 {
+
+
     class Program
     {
-
-
         static void Main(string[] args)
         {
-
-            DateTime today = new DateTime(2019, 1, 1);
-            Console.WriteLine("2019年1月1日为" + today.DayOfWeek.ToString() + ",");
-
-            for (int i = 0; i < 7; i++)
-            {
-                if (today.DayOfWeek.ToString() == DayOfWeek.Sunday.ToString())
-                {
-                    break;
-                }
-                else
-                {
-                    today = today.AddDays(1);
-                }
-            }
-            Console.WriteLine($"{today.Year}年{today.Month}月{today.Day}日为该年第一个星期天。");
-            for (int i = 0; i < (365 + 7) / 7; i++)
-            {
-                DateTime firstday = today.AddDays(7 * i - 7);
-                Console.Write($"第{i + 1}周:{firstday.Year}年{firstday.Month}月{firstday.Day}日");
-                DateTime lastday = today.AddDays(7 * i - 1);
-                Console.WriteLine($"------{lastday.Year}年{lastday.Month}月{lastday.Day}日");
-
-            }
+            MinicStack stack = new MinicStack(10);
+            stack.Push(8);
+            stack.Push(33);
+            stack.Pop();
+            stack.Push(22);
+            stack.Push(5);
+            stack.Push(34);
+            stack.Push(45);
+            stack.Push(7);
+            stack.Pop();
+            stack.Pop();
             Console.Read();
         }
     }
+
+
+    class MinicStack   //面向对象：首先定义一个类
+    {
+        private int[] _array = null;   //private：实现封装,不能让人改
+        private int top;
+        public MinicStack(int length)    //构造函数
+        {
+            _array = new int[length];
+        }
+        internal void Push(int value)  //压入一个数字
+        {
+            Console.WriteLine($"{value}入栈");
+            _array[top] = value;         //静态static方法对应的是实例
+            top++;                   //当入栈数值等于数组数字，top自增
+            Arrayshow.Inline(_array);        //inline是静态方法，直接类名点出来，实例需要new一个
+            Console.WriteLine();
+            Console.WriteLine("---------");
+        }
+        internal void Pop()
+
+        {
+            Console.WriteLine($"{_array[top - 1]}出栈");
+            _array[top - 1] = 0;
+            top--;
+            Arrayshow.Inline(_array);
+            Console.WriteLine();
+            Console.WriteLine("--------");
+
+
+        }
+    }
+
+    internal static class Arrayshow     // 方法  ，静态方法对应实例方法
+    {
+        internal static void On(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[0]);
+            }
+        }
+        //internal static void On(int[][] array)
+        internal static void Inline(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i]+" ");
+            }
+        }
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//namespace China.meinv
+//{
+//    class Program
+//    {
+
+
+//        static void Main(string[] args)
+//        {
+
+
+//            DateTime today = new DateTime(2019, 1, 1);
+//            Console.WriteLine("2019年1月1日为" + today.DayOfWeek.ToString() + ",");
+
+//            for (int i = 0; i < 7; i++)
+//            {
+//                if (today.DayOfWeek.ToString() == DayOfWeek.Sunday.ToString())
+//                {
+//                    break;
+//                }
+//                else
+//                {
+//                    today = today.AddDays(1);
+//                }
+//            }
+//            Console.WriteLine($"{today.Year}年{today.Month}月{today.Day}日为该年第一个星期天。");
+//            for (int i = 0; i < (365 + 7) / 7; i++)
+//            {
+//                DateTime firstday = today.AddDays(7 * i - 7);
+//                Console.Write($"第{i + 1}周:{firstday.Year}年{firstday.Month}月{firstday.Day}日");
+//                DateTime lastday = today.AddDays(7 * i - 1);
+//                Console.WriteLine($"------{lastday.Year}年{lastday.Month}月{lastday.Day}日");
+
+//            }
+//            Console.Read();
+//        }
+//    }
+//}
 
 
 
