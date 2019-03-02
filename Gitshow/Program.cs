@@ -4,79 +4,99 @@
 
 namespace Junior
 {
-
-
     class Program
     {
+   
         static void Main(string[] args)
         {
-            MinicStack stack = new MinicStack(10);
-            stack.Push(8);
-            stack.Push(33);
-            stack.Pop();
-            stack.Push(22);
-            stack.Push(5);
-            stack.Push(34);
-            stack.Push(45);
-            stack.Push(7);
-            stack.Pop();
-            stack.Pop();
+            //找最大值
+            int[] array = new int[] { 1, 2, 3, 4, 5, 6, 9, 8 };
+            int max = array[0];
+            for (int i = 1; i < array.Length; i++)
+            {
+
+                if (max > array[i])
+                {
+                    Console.WriteLine($"第{i}次比较，最大值为{max}");
+                }
+                else
+                {
+                    Console.WriteLine($"第{i}次比较，最大值为{array[i]}");
+                    max = array[i];
+                }
+            }
             Console.Read();
         }
+
+
+
+    }
     }
 
 
-    class MinicStack   //面向对象：首先定义一个类
-    {
-        private int[] _array = null;   //private：实现封装,不能让人改
-        private int top;
-        public MinicStack(int length)    //构造函数
-        {
-            _array = new int[length];
-        }
-        internal void Push(int value)  //压入一个数字
-        {
-            Console.WriteLine($"{value}入栈");
-            _array[top] = value;         //静态static方法对应的是实例
-            top++;                   //当入栈数值等于数组数字，top自增
-            Arrayshow.Inline(_array);        //inline是静态方法，直接类名点出来，实例需要new一个
-            Console.WriteLine();
-            Console.WriteLine("---------");
-        }
-        internal void Pop()
+//            MinicStack stack = new MinicStack(10);
+//            stack.Push(8);
+//            stack.Push(33);
+//            stack.Pop();
+//            stack.Push(22);
+//            stack.Push(5);
+//            stack.Push(34);
+//            stack.Push(45);
+//            stack.Push(7);
+//            stack.Pop();
+//            stack.Pop();
+//            Console.Read();
+//        }
+//    }
 
-        {
-            Console.WriteLine($"{_array[top - 1]}出栈");
-            _array[top - 1] = 0;
-            top--;
-            Arrayshow.Inline(_array);
-            Console.WriteLine();
-            Console.WriteLine("--------");
+//    class MinicStack   //面向对象：首先定义一个类
+//    {
+//        private int[] array = null;   //private：实现封装,不能让人改
+//        private int top;
+//        public MinicStack(int length)    //构造函数
+//        {
+//            array = new int[length];
+//        }
+//        internal void Push(int value)  //压入一个数字
+//        {
+//            Console.WriteLine($"{value}入栈");
+//            array[top] = value;         //静态static方法对应的是实例
+//            top++;                   //当入栈数值等于数组数字，top自增
+//            Arrayshow.Inline(array);        //inline是静态方法，直接类名点出来，实例需要new一个
+//            Console.WriteLine();
+//            Console.WriteLine("---------");
+//        }
+//        internal void Pop()
+//        {
+//            Console.WriteLine($"{array[top - 1]}出栈");
+//            array[top - 1] = 0;
+//            top--;
+//            Arrayshow.Inline(array);
+//            Console.WriteLine();
+//            Console.WriteLine("--------");
+//        }
+//    }
 
+//    internal static class Arrayshow     // 方法  ，静态方法对应实例方法
+//    {
+//        internal static void On(int[] array)
+//        {
+//            for (int i = 0; i < array.Length; i++)
+//            {
+//                Console.WriteLine(array[0]);
+//            }
+//        }
+//        //internal static void On(int[][] array)
+//        internal static void Inline(int[] array)
+//        {
+//            for (int i = 0; i < array.Length; i++)
+//            {
+//                Console.Write(array[i] + " ");
+//            }
+//        }
+//    }
+//}
 
-        }
-    }
-
-    internal static class Arrayshow     // 方法  ，静态方法对应实例方法
-    {
-        internal static void On(int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine(array[0]);
-            }
-        }
-        //internal static void On(int[][] array)
-        internal static void Inline(int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i]+" ");
-            }
-        }
-
-    }
-}
 
 
 
