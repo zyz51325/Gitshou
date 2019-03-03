@@ -29,6 +29,18 @@ namespace home
 
 
 
+        //求最大值
+        //{
+
+        //    ShowArray showarray = new ShowArray ();
+        //    Console.WriteLine("数组为:1,2,3,8,677,7,5,4。");
+        //    GetMax(showarray.maxarray);
+        //    Console.Read();
+        //}
+
+
+
+
 
 
         //空间数组
@@ -133,14 +145,6 @@ namespace home
         //}
 
 
-        //求最大值
-        //{
-
-        //    ShowArray showarray = new ShowArray ();
-        //    Console.WriteLine("数组为:1,2,3,8,677,7,5,4。");
-        //    GetMax(showarray.maxarray);
-        //    Console.Read();
-        //}
 
 
 
