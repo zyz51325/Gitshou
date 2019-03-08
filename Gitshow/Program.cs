@@ -9,22 +9,33 @@ namespace home
     {
         static void Main(string[] args)
 
-        {
-            MultipleArray multiplearray = new MultipleArray();
 
-            Console.WriteLine("空间数组为：");
-            for (int i = 0; i < 4; i++)
-            {
-                Console.WriteLine();
-                for (int j = 0; j < 5; j++)
-                {
-                    multiplearray.array[i, j] = i + j;
-                    Console.Write(multiplearray.array[i, j] + "   ");
-                }
-            }
-            Console.Read();
 
-        }
+
+
+
+            //名字翻转
+        //{
+        //    school("yuanzhan");
+        //}
+        
+
+        //{
+        //    MultipleArray multiplearray = new MultipleArray();
+
+        //    Console.WriteLine("空间数组为：");
+        //    for (int i = 0; i < 4; i++)
+        //    {
+        //        Console.WriteLine();
+        //        for (int j = 0; j < 5; j++)
+        //        {
+        //            multiplearray.array[i, j] = i + j;
+        //            Console.Write(multiplearray.array[i, j] + "   ");
+        //        }
+        //    }
+        //    Console.Read();
+
+        //}
 
 
 
@@ -32,7 +43,7 @@ namespace home
         //求最大值
         //{
 
-        //    ShowArray showarray = new ShowArray ();
+        //    ShowArray showarray = new ShowArray();
         //    Console.WriteLine("数组为:1,2,3,8,677,7,5,4。");
         //    GetMax(showarray.maxarray);
         //    Console.Read();
@@ -343,23 +354,29 @@ namespace home
             }
             Console.ReadLine();
         }
+        static void school(string name)
+        {
+            Console.WriteLine("转换前的名称为：" + name);
+            char[] input = name.ToCharArray();
+            char[] output = new char[name.Length];
+            for (int i = 0; i < output.Length; i++)
+            {
+                output[i] = input[output.Length - 1 - i];
+            }
+            Console.Write("转换后名称为：");
+            Console.WriteLine(output);
+            Console.Read();
+        }
 
 
     }
-  
-    class MaxArray
-    {
-      internal  int[] maxarray = new int[] { 1, 2, 3, 8, 677, 7, 5, 4 };
-    }
-    class ShowArray:MaxArray
-    {
 
-    }
+
     class Array
     {
         internal int[,] array = new int[4, 5];
     }
-    
+
     class MultipleArray : Array
     {
 
