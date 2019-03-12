@@ -14,28 +14,28 @@ namespace home
 
 
 
-            //名字翻转
-        //{
-        //    school("yuanzhan");
-        //}
-        
-
-        //{
-        //    MultipleArray multiplearray = new MultipleArray();
-
-        //    Console.WriteLine("空间数组为：");
-        //    for (int i = 0; i < 4; i++)
-        //    {
-        //        Console.WriteLine();
-        //        for (int j = 0; j < 5; j++)
+        //    //名字翻转
         //        {
-        //            multiplearray.array[i, j] = i + j;
-        //            Console.Write(multiplearray.array[i, j] + "   ");
+        //            school("yuanzhan");
         //        }
-        //    }
-        //    Console.Read();
 
+
+        //        {
+        //            MultipleArray multiplearray = new MultipleArray();
+
+        //        Console.WriteLine("空间数组为：");
+        //            for (int i = 0; i< 4; i++)
+        //            {
+        //                Console.WriteLine();
+        //                for (int j = 0; j< 5; j++)
+        //                {
+        //                    multiplearray.array[i, j] = i + j;
+        //                    Console.Write(multiplearray.array[i, j] + "   ");
+        //                }
         //}
+        //Console.Read();
+
+        //        }
 
 
 
@@ -248,215 +248,215 @@ namespace home
 
 
         static float Swap(ref float a, ref float b)
+{
+    float c;
+    c = a;
+    a = b;
+    b = c;
+    return a;
+}
+static int Add(int a, int b)
+{
+    return a + b;
+}
+static int Double(ref int i, out bool result)
+{
+    if (i > 0)
+    {
+        i = i * 2;
+        result = true;
+    }
+    else
+    {
+        i = 0;
+        result = false;
+    }
+    return i;
+}
+static int RandomArray(int[] array, int i, int length)
+{
+    while (i < length - 2)
+    {
+        i++;
+        array[i] = array[i - 1] + new Random().Next(3, 16);
+        Console.Write(array[i] + ",");
+    }
+    return array[i];
+}
+static int Dichotomy(int[] array)
+{
+    int index = array.Length - 1;
+    int input = Convert.ToInt32(Console.ReadLine());
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        if (input == array[index])
         {
-            float c;
-            c = a;
-            a = b;
-            b = c;
-            return a;
+            Console.WriteLine($"找到了,共查找了{i + 1}次，位置在{index + 1}：数值为{input}");
+            break;
         }
-        static int Add(int a, int b)
+        else
         {
-            return a + b;
-        }
-        static int Double(ref int i, out bool result)
-        {
-            if (i > 0)
+            Console.WriteLine($"第{i + 1}次查找，取第{index + 1}位值为{array[index]}");
+            if (input > array[index])
             {
-                i = i * 2;
-                result = true;
+                index = index + array.Length / (2 * (i + 1));
             }
             else
             {
-                i = 0;
-                result = false;
+                index = index - (array.Length - 1) / (2 * (i + 1));
             }
-            return i;
-        }
-        static int RandomArray(int[] array, int i, int length)
-        {
-            while (i < length - 2)
-            {
-                i++;
-                array[i] = array[i - 1] + new Random().Next(3, 16);
-                Console.Write(array[i] + ",");
-            }
-            return array[i];
-        }
-        static int Dichotomy(int[] array)
-        {
-            int index = array.Length - 1;
-            int input = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < array.Length - 1; i++)
-            {
-                if (input == array[index])
-                {
-                    Console.WriteLine($"找到了,共查找了{i + 1}次，位置在{index + 1}：数值为{input}");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine($"第{i + 1}次查找，取第{index + 1}位值为{array[index]}");
-                    if (input > array[index])
-                    {
-                        index = index + array.Length / (2 * (i + 1));
-                    }
-                    else
-                    {
-                        index = index - (array.Length - 1) / (2 * (i + 1));
-                    }
-                    Console.WriteLine($"设下一次查找位置为第{index + 1}位");
+            Console.WriteLine($"设下一次查找位置为第{index + 1}位");
 
-                }
-            }
-            return index;
         }
-        static int GetMax(int[] showarray)
+    }
+    return index;
+}
+static int GetMax(int[] showarray)
+{
+    int max = showarray[0];
+    for (int i = 1; i < showarray.Length; i++)
+    {
+        if (showarray[i] >= max)
         {
-            int max = showarray[0];
-            for (int i = 1; i < showarray.Length; i++)
-            {
-                if (showarray[i] >= max)
-                {
-                    Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{showarray[i]}");
-                    max = showarray[i];
-                }
-                else
-                {
-                    Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{max}");
-                }
-            }
-            return max;
+            Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{showarray[i]}");
+            max = showarray[i];
         }
-        static void GuessGame(int guess)
+        else
         {
-            int max = 100;
-            int random = new Random().Next(max);
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine("输入一个数：");
-                int input = Convert.ToInt32(Console.ReadLine());
-                if (input == random)
-                {
-                    Console.WriteLine("恭喜答对了！");
-                    break;
-                }
-                else if (input > random)
-                {
-                    Console.WriteLine($"太大了，只剩{9 - i}次了！");
-                }
-                else
-                    Console.WriteLine($"太小了，只剩{9 - i}次了哦！");
-            }
-            if (guess != random)
-            {
-                Console.WriteLine($"错了，正确答案是{random}");
-            }
-            Console.ReadLine();
+            Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{max}");
         }
-        static void school(string name)
+    }
+    return max;
+}
+static void GuessGame(int guess)
+{
+    int max = 100;
+    int random = new Random().Next(max);
+    for (int i = 0; i < 10; i++)
+    {
+        Console.WriteLine("输入一个数：");
+        int input = Convert.ToInt32(Console.ReadLine());
+        if (input == random)
         {
-            Console.WriteLine("转换前的名称为：" + name);
-            char[] input = name.ToCharArray();
-            char[] output = new char[name.Length];
-            for (int i = 0; i < output.Length; i++)
-            {
-                output[i] = input[output.Length - 1 - i];
-            }
-            Console.Write("转换后名称为：");
-            Console.WriteLine(output);
-            Console.Read();
+            Console.WriteLine("恭喜答对了！");
+            break;
         }
+        else if (input > random)
+        {
+            Console.WriteLine($"太大了，只剩{9 - i}次了！");
+        }
+        else
+            Console.WriteLine($"太小了，只剩{9 - i}次了哦！");
+    }
+    if (guess != random)
+    {
+        Console.WriteLine($"错了，正确答案是{random}");
+    }
+    Console.ReadLine();
+}
+static void school(string name)
+{
+    Console.WriteLine("转换前的名称为：" + name);
+    char[] input = name.ToCharArray();
+    char[] output = new char[name.Length];
+    for (int i = 0; i < output.Length; i++)
+    {
+        output[i] = input[output.Length - 1 - i];
+    }
+    Console.Write("转换后名称为：");
+    Console.WriteLine(output);
+    Console.Read();
+}
 
 
     }
 
 
     class Array
+{
+    internal int[,] array = new int[4, 5];
+}
+
+class MultipleArray : Array
+{
+
+}
+
+class Father
+{
+    protected int Money = 1000000;
+}
+
+class Mother
+{
+
+}
+class Child : Father
+{
+    internal int OwnMoney;
+    public Child()
     {
-        internal int[,] array = new int[4, 5];
+        OwnMoney = Money;
     }
 
-    class MultipleArray : Array
-    {
+}
+class Child2 : Father
+{
+    internal int OwnMoney = 500;
 
+}
+class GrandChild : Child
+{
+
+}
+
+
+class MinicStack
+{
+    private int[] array = null;
+    private int top;
+    public MinicStack(int length)
+    {
+        array = new int[length];
     }
-
-    class Father
+    internal void Push(int value)
     {
-        protected int Money = 1000000;
+        Console.WriteLine($"{value}入栈");
+        array[top] = value;
+        top++;
+        Arrayshow.Inline(array);
+        Console.WriteLine();
+        Console.WriteLine("---------");
     }
-
-    class Mother
+    internal void Pop()
     {
-
+        Console.WriteLine($"{array[top - 1]}出栈");
+        array[top - 1] = 0;
+        top--;
+        Arrayshow.Inline(array);
+        Console.WriteLine();
+        Console.WriteLine("--------");
     }
-    class Child : Father
+}
+
+internal static class Arrayshow
+{
+    internal static void On(int[] array)
     {
-        internal int OwnMoney;
-        public Child()
+        for (int i = 0; i < array.Length; i++)
         {
-            OwnMoney = Money;
-        }
-
-    }
-    class Child2 : Father
-    {
-        internal int OwnMoney = 500;
-
-    }
-    class GrandChild : Child
-    {
-
-    }
-
-
-    class MinicStack
-    {
-        private int[] array = null;
-        private int top;
-        public MinicStack(int length)
-        {
-            array = new int[length];
-        }
-        internal void Push(int value)
-        {
-            Console.WriteLine($"{value}入栈");
-            array[top] = value;
-            top++;
-            Arrayshow.Inline(array);
-            Console.WriteLine();
-            Console.WriteLine("---------");
-        }
-        internal void Pop()
-        {
-            Console.WriteLine($"{array[top - 1]}出栈");
-            array[top - 1] = 0;
-            top--;
-            Arrayshow.Inline(array);
-            Console.WriteLine();
-            Console.WriteLine("--------");
-        }
-    }
-
-    internal static class Arrayshow
-    {
-        internal static void On(int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine(array[0]);
-            }
-        }
-
-        internal static void Inline(int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + " ");
-            }
+            Console.WriteLine(array[0]);
         }
     }
+
+    internal static void Inline(int[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write(array[i] + " ");
+        }
+    }
+}
 }
 
 namespace China.Chongqing
