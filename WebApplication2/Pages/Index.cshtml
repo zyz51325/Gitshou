@@ -1,153 +1,164 @@
 ﻿@page
-<div id="menu" style="background-color:gainsboro;height:60px">
+<header>
 
-    <div class="right" style="cursor:pointer;margin-right:20px;margin-top:20px">
-        <div class="dropdown">
-            <span>①求助 </span>
-            <div class="dropdown-content">
-                <p><a href="http://17bang.ren/Log/On?prepage=%2fProblem%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"> 发布</a></p>
-                <p><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></p>
-            </div>
-        </div>
-        <div class="dropdown">
-            <span>②督促 </span>
-            <div class="dropdown-content">
-                <p><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></p>
-                <p><a href="http://17bang.ren/Plan">督促别人</a></p>
-                <p><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></p>
-                <p><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></p>
-            </div>
-        </div>
-        <div class="dropdown">
-            <span>③文章 </span>
-            <div class="dropdown-content">
-                <p>列表</p>
-            </div>
-        </div>
-        <div class="dropdown">
-            <span>④APP下载 </span>
-            <div class="dropdown-content">
-                <p><a href="http://17bang.ren/install-Android.apk">Android</a></p>
-                <p><a href="http://17bang.ren/install-iOS.ipa">IOS</a></p>
-            </div>
-        </div>
-        <div class="dropdown">
-            <span>⑤未登录</span>
-            <div class="dropdown-content">
-                <p><a href="http://17bang.ren/Log/On?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">登录</a></p>
-                <p><a href="http://17bang.ren/Register/Home?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">注册</a></p>
-                <p><a href="http://17bang.ren/Password/Forget">忘记密码</a></p>
-            </div>
-        </div>
+    <div id="logo">
+        <img src="~/images/logo-big.ico" style="float:left;margin-top:8px;">
+
+        <span style="float:left;margin-left:10px;margin-top:20px">
+            <span style="font-size:20px;font-weight:bolder;">一起帮</span><span>·网络互助平台</span>
+        </span>
     </div>
-    <div id="header">
-        <p style="float:left;margin-top:8px;">
-            <img src="~/images/logo-big.ico"/>
-        </p>
-        <span style="float:left;margin-left:10px;margin-top:20px"><b>一起帮</b>·网络互助平台</span>
-    </div>
+    <nav>
+        <ul style="cursor:pointer;margin-right:20px;float:right;margin-top:20px">
+            <li class="dropdown">
+                <span>①求助 </span>
+                <ul class="dropdown-content">
+                    <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"> 发布</a></li>
+                    <li><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span>②督促 </span>
+                <ul class="dropdown-content">
+                    <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
+                    <li><a href="http://17bang.ren/Plan">督促别人</a></li>
+                    <li><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></li>
+                    <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span>③文章 </span>
+                <ul class="dropdown-content">
+                    <li>列表</li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span>④APP下载 </span>
+                <ul class="dropdown-content">
+                    <li><a href="http://17bang.ren/install-Android.apk">Android</a></li>
+                    <li><a href="http://17bang.ren/install-iOS.ipa">IOS</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span>⑤未登录</span>
+                <ul class="dropdown-content">
+                    <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">登录</a></li>
+                    <li><a href="http://17bang.ren/Register/Home?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">注册</a></li>
+                    <li><a href="http://17bang.ren/Password/Forget">忘记密码</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+
+</header>
+<div id="notice" class="contain" style="margin-top:120px;">
+    <span>欢迎加入一起帮</span>
+    <a href="#">全部消息</a>
 </div>
 <hr />
-<div id="menu" style="height:600px;width:45%;float:right;margin-right: 100px">
-    <h1>＠说明</h1>
-    <ol class="right">
-        <li>
-            我们希望通过一起帮，能直接解决大家在电脑操作/软件
-            使用/编程学习等方面的具体问题。
-        </li>
-        <li>
-            现在互联网远程技术（比如QQ桌面共享）已经非常成熟，
-            当我们再遇到上述问题，如果别人能直接远程给予帮助，
-            岂不是好？
-        </li>
-        <li>
-            当然，你也可以在你熟悉的领域去帮助别人。由此而形
-            成我们这个“你帮他他帮我我帮你，大家一起帮”的网
-            上互助社区平台。
-        </li>
-        <li>
-            公平起见，我们还引入了 帮帮点/币/豆 三级概念，以
-            记录和衡量社区成员的收获和贡献。
-        </li>
-        <li>赶快加入我们，赚取帮帮币吧！</li>
-        <li><a href="http://17bang.ren/About/Us"> 了解更多</a></li>
-    </ol>
-</div>
+<hr style="border:0;border-top:1px solid">
+<main class="contain">
+
+    <h1>注册</h1>
 
 
-<div id="menu" style="height:600px;width:45%;float:left;margin-left:0">
-    <div id="menu" style="background-color:lightgoldenrodyellow;height:180px;width:400px;float:left;margin-left:0">
+        <form id="leftside" style="height:600px;width:45%;float:left;margin-left:20px">
+            <ul class="left" style=list-style-type:none>
+                <li class="length">
+                    <label>邀请人：（* 必填，没有邀请人）：</label>
+                    <br>
+                    <input type="text" name="邀请人" style="width:300px; height:30px;" size="25" maxlength="35" placeholder="他的用户名，模糊查询只能从头开始">
+                </li>
+
+                <li class="length">
+                    <label>邀请码：（* 必填）：</label>
+                    <br>
+                    <input type="text" name="邀请码" style="width:300px; height:30px;" size="25" maxlength="35" placeholder="四位数字">
+                </li>
+
+                <li class="length">
+                    <label>用户名：（* 必填）：</label>
+                    <br>
+                    <input type="text" name="用户名" style="width:260px; height:30px;" size="20" maxlength="40" placeholder="登录用户名，可修改，不能重复">
+                </li>
+
+                <li class="length">
+                    <label>密码：（* 必填）：</label>
+                    <br>
+                    <input type="password" name="密码" style="width:260px; height:30px;" size="20" maxlength="40" placeholder="不少于4个字符">
+                </li>
+
+                <li class="length">
+                    <label>验证密码：（* 必填）：</label>
+                    <br>
+                    <input type="password" name="验证密码" style="width:260px; height:30px;" size="20" maxlength="40" placeholder="和密码相同">
+                </li>
+
+                <li>
+                    <label>验证码：（* 必填）:</label>
+                    <br>
+                    <input type="text" name="验证码" style="width:100px; height:30px;" size="8" maxlength="8"> 点击输入框显示
+                </li>
+            </ul>
+
+
+
+
+            <div id="bottom" style="height:100px;width:49.99%;margin-left:40px">
+                <button type="submit"> 提交</button>
+                <button type="reset"> 重置</button> &ensp;&ensp;&ensp;&ensp;
+                <a href="http://17bang.ren/Log/On?prepage=%2fArticle" style="background-color:goldenrod;border:1px solid gray;text-align:center;color:black"> 登录</a>
+
+                <label><input type="checkbox" />记住我</label>
+            </div>
+        </form>
+ 
+
+
+        <aside id="explain" style="height:600px;width:45%;float:left;margin-right: auto">
+            <h2>＠说明</h2>
+            <ol>
+                <li class="length">
+                    我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题。
+                </li>
+                <li class="length">
+                    现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？
+                </li>
+                <li class="length">
+                    当然，你也可以在你熟悉的领域去帮助别人。由此而形成我们这个“你帮他他帮我我帮你，大家一起帮”的网上互助社区平台。
+                </li>
+                <li class="length">
+                    公平起见，我们还引入了 帮帮点/币/豆 三级概念，以记录和衡量社区成员的收获和贡献。
+                </li>
+                <li class="length">
+                    赶快加入我们，赚取帮帮币吧！
+                </li>
+                <li>
+                    <a href="http://17bang.ren/About/Us">了解更多</a>
+                </li>
+            </ol>
+        </aside>
+ 
+</main>
+<footer class="contain">
+    <div id="links" style="clear:both;height:50px;">
+
         <ul class="left" style=list-style-type:none>
             <li>
-                邀请人：（* 必填，没有邀请人）：<p>
-                </p>
-                <input type="text" name="邀请人" style="width:300px; height:30px;" size="25" maxlength="35" placeholder="他的用户名，模糊查询只能从头开始">
+                <a href="http://17bang.ren/About/Us"> 关于我们</a>
+                <a href="http://17bang.ren/About/Us"> 常见问题</a>
+                <a href="http://17bang.ren/About/Us"> 意见建议</a>
+                <a href="http://17bang.ren/About/Us"> 历史通知</a>
+                <a href="http://17bang.ren/About/Us"> 友情捐赠</a>
+                <a href="http://17bang.ren/About/Us"> 融资2018</a>
             </li>
-
             <li>
-                邀请码：（* 必填）：
-                <p>
-                </p>
-                <input type="text" name="邀请码" style="width:300px; height:30px;" size="25" maxlength="35" placeholder="四位数字">
+                <a href="http://17bang.ren/About/Us"> 友情链接:</a>
             </li>
         </ul>
     </div>
-    <ul class="left" style=list-style-type:none>
+    <div id="legal">
 
-
-        <li>
-            用户名：（* 必填）：
-            <p>
-            </p>
-            <input type="text" name="用户名" style="width:260px; height:30px;" size="20" maxlength="40" placeholder="登录用户名，可修改，不能重复">
-        </li>
-
-        <li>
-            密码：（* 必填）：
-            <p>
-            </p>
-            <input type="password" name="密码" style="width:260px; height:30px;" size="20" maxlength="40" placeholder="不少于4个字符">
-        </li>
-
-        <li>
-            验证密码：（* 必填）：
-            <p>
-            </p>
-            <input type="password" name="验证密码" style="width:260px; height:30px;" size="20" maxlength="40" placeholder="和密码相同">
-        </li>
-
-        <li>
-            验证码：（* 必填）
-            <p>
-            </p>
-            <input type="text" name="验证码" style="width:100px; height:30px;" size="8" maxlength="8"> 点击输入框显示
-        </li>
-    </ul>
-
-    <div id="menu" style="height:100px;width:60%;float:left;margin-left: 40px">
-
-        <button type="submit"> 提交</button>
-        <button type="reset"> 重置</button> &ensp;&ensp;&ensp;&ensp;
-        <button type="submit"><link href="http://17bang.ren/Log/On?prepage=%2fArticle"> 登录</button>
-
-        <label><input type="checkbox" />记住我</label>
     </div>
-</div>
-
-
-<div id="footer" style="clear:both;height:50px;">
-
-    <ul class="left" style=list-style-type:none>
-        <li>
-            <a href="http://17bang.ren/About/Us"> 关于我们</a>|
-            <a href="http://17bang.ren/About/Us"> 常见问题</a>|
-            <a href="http://17bang.ren/About/Us"> 意见建议</a>|
-            <a href="http://17bang.ren/About/Us"> 历史通知</a>|
-            <a href="http://17bang.ren/About/Us"> 友情捐赠</a>|
-            <a href="http://17bang.ren/About/Us"> 融资2018</a>
-        </li>
-        <li>
-            <a href="http://17bang.ren/About/Us"> 友情链接:</a>
-        </li>
-    </ul>
-</div>
+</footer>
