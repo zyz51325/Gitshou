@@ -1,6 +1,6 @@
 ﻿using System;
-//using CQ = China.Chongqing;
-//using TW = China.Taiwan;
+using CQ = China.Chongqing;
+using TW = China.Taiwan;
 
 
 namespace home
@@ -10,19 +10,19 @@ namespace home
         static void Main(string[] args)
 
         //空间数组
-        {
-            int[,] multiplearray = new int[4, 5];
-            for (int i = 0; i < 4; i++)
-            {
-                Console.WriteLine();
-                for (int j = 0; j < 5; j++)
-                {
-                    multiplearray[i, j] = i + j;
-                    Console.Write(multiplearray[i, j] + "   ");
-                }
-            }
-            Console.Read();
-        }
+        //{
+        //    int[,] multiplearray = new int[4, 5];
+        //    for (int i = 0; i < 4; i++)
+        //    {
+        //        Console.WriteLine();
+        //        for (int j = 0; j < 5; j++)
+        //        {
+        //            multiplearray[i, j] = i + j;
+        //            Console.Write(multiplearray[i, j] + "   ");
+        //        }
+        //    }
+        //    Console.Read();
+        //}
 
 
 
@@ -209,31 +209,29 @@ namespace home
         //}
 
         //美女比较
-        //{
-        //    CQ.Beauty 蒋勤勤 = new CQ.Beauty(168, 55, "蒋勤勤", true);
-        //    Console.WriteLine($"重庆美女{蒋勤勤.Name} 身高{蒋勤勤.Height}cm，体重{蒋勤勤.Weight}公斤，是否婚配：{蒋勤勤.Married}");//按.后自动显示参数
+        {
+            CQ.Beauty 蒋勤勤 = new CQ.Beauty(168, 55, "蒋勤勤", true);
+        Console.WriteLine($"重庆美女{蒋勤勤.Name} 身高{蒋勤勤.Height}cm，体重{蒋勤勤.Weight}公斤，是否婚配：{蒋勤勤.Married}");//按.后自动显示参数
 
-        //    TW.Beauty 林志玲 = new TW.Beauty(166, 44, "林志玲", false);
-        //    Console.WriteLine($"台湾美女{林志玲.Name} 身高{林志玲.Height}cm，体重{林志玲.Weight}公斤，是否婚配：{林志玲.Married}");
+            TW.Beauty 林志玲 = new TW.Beauty(166, 44, "林志玲", false);
+        Console.WriteLine($"台湾美女{林志玲.Name} 身高{林志玲.Height}cm，体重{林志玲.Weight}公斤，是否婚配：{林志玲.Married}");
 
-        //    Console.Read();
+            Console.Read();
 
-        //}
-
-
-
-        //数值交换
-        //{
-        //    float a = 3.7f;
-        //    float b = 5.2f;
-        //    Swap(ref a, ref b);              //ref 参数传递                                  //Show（array）;
-        //    Console.WriteLine("结果为:");
-        //    Console.WriteLine("a=" + a);                                              //Show(int[] array);
-        //    Console.WriteLine("b=" + b);
-        //    Console.Read();
-        //}
+        }
 
 
+
+    //数值交换
+    //{
+    //    float a = 3.7f;
+    //    float b = 5.2f;
+    //    Swap(ref a, ref b);              //ref 参数传递                                  //Show（array）;
+    //    Console.WriteLine("结果为:");
+    //    Console.WriteLine("a=" + a);                                              //Show(int[] array);
+    //    Console.WriteLine("b=" + b);
+    //    Console.Read();
+    //}
 
 
 
@@ -247,7 +245,9 @@ namespace home
 
 
 
-        static float Swap(ref float a, ref float b)
+
+
+    static float Swap(ref float a, ref float b)
 {
     float c;
     c = a;
