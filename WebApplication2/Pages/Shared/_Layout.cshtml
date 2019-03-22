@@ -1,63 +1,14 @@
 ﻿<!DOCTYPE html>
-<header>
-
-    <div id="logo">
-        <img src="~/images/logo-big.ico" style="float:left;margin-top:8px;">
-
-        <span style="float:left;margin-left:10px;margin-top:20px">
-            <span style="font-size:20px;font-weight:bolder;">一起帮</span><span>·网络互助平台</span>
-        </span>
-    </div>
-    <nav>
-        <ul style="cursor:pointer;margin-right:20px;float:right;margin-top:20px">
-            <li class="dropdown">
-                <span>求助 </span>
-                <ul class="dropdown-content">
-                    <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"> 发布</a></li>
-                    <li><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <span>督促 </span>
-                <ul class="dropdown-content">
-                    <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
-                    <li><a href="http://17bang.ren/Plan">督促别人</a></li>
-                    <li><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></li>
-                    <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <span>文章 </span>
-                <ul class="dropdown-content">
-                    <li>列表</li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <span>APP下载 </span>
-                <ul class="dropdown-content">
-                    <li><a href="http://17bang.ren/install-Android.apk">Android</a></li>
-                    <li><a href="http://17bang.ren/install-iOS.ipa">IOS</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <span>未登录</span>
-                <ul class="dropdown-content">
-                    <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">登录</a></li>
-                    <li><a href="http://17bang.ren/Register/Home?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">注册</a></li>
-                    <li><a href="http://17bang.ren/Password/Forget">忘记密码</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
 
 
-</header>
 <html>
 
 <head>
     <link rel="shortcut icon" href="~/images/logo-big.ico" />
     <meta charset="utf-8" />
     <title>注册·一起帮</title>
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    
     <style type="text/css">
         a {
             text-decoration: none
@@ -66,30 +17,17 @@
         * {
             margin-top: 0;
         }
-
-        .container {
-            width: 1130px;
-            margin-right: auto;
-            margin-left: auto;
-            margin-right: auto;
-            margin-left: auto;
+        .flag {
+            z-index: 100;
+            position: fixed;
+            background-color: rgba(128,255,212,0.7);
+            padding: 5px 7px;
+            border-bottom-left-radius: 6px;
+            border-top-right-radius: 6px;
         }
 
-        .row {
-            margin-right: -10px;
-            margin-left: -10px;
-        }
-
-        .col-md-8 {
-            width: 66.66666667%;
-        }
-
-        .col-md-4 {
-            width: 33.33333333%;
-        }
-
-        .col-md-3 {
-            width: 25%;
+        .text-center {
+            text-align: center;
         }
         .widget {
             border: 1px dashed #eee;
@@ -98,6 +36,7 @@
             word-break: break-all;
             background-color: #fff;
         }
+
         .form {
             display: block;
             padding: 6px 12px;
@@ -106,7 +45,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        
+
 
         .padding-top {
             padding-top: 10px;
@@ -157,7 +96,6 @@
             position: fixed;
             top: 0;
             background-color: aliceblue;
-            border-bottom: 1px solid #ff00dc;
         }
 
         #logo {
@@ -261,6 +199,59 @@
     </style>
 </head>
 <body>
+    <header>
+
+        <div id="logo">
+            <img src="~/images/logo-big.ico" style="float:left;margin-top:8px;">
+
+            <span style="float:left;margin-left:10px;margin-top:20px">
+                <span style="font-size:20px;font-weight:bolder;">一起帮</span><span>·网络互助平台</span>
+            </span>
+        </div>
+        <nav>
+            <ul style="cursor:pointer;margin-right:20px;float:right;margin-top:20px">
+                <li class="dropdown">
+                    <span>求助 </span>
+                    <ul class="dropdown-content">
+                        <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"> 发布</a></li>
+                        <li><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span>督促 </span>
+                    <ul class="dropdown-content">
+                        <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
+                        <li><a href="http://17bang.ren/Plan">督促别人</a></li>
+                        <li><a href="http://17bang.ren/Plan?my=f&full=False&due=False&expire=False&Frozen=False">我的目标</a></li>
+                        <li><a href="http://17bang.ren/Plan?my=s&full=False&due=False&expire=True&Frozen=False">我的督促</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span>文章 </span>
+                    <ul class="dropdown-content">
+                        <li>列表</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span>APP下载 </span>
+                    <ul class="dropdown-content">
+                        <li><a href="http://17bang.ren/install-Android.apk">Android</a></li>
+                        <li><a href="http://17bang.ren/install-iOS.ipa">IOS</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <span>未登录</span>
+                    <ul class="dropdown-content">
+                        <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">登录</a></li>
+                        <li><a href="http://17bang.ren/Register/Home?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">注册</a></li>
+                        <li><a href="http://17bang.ren/Password/Forget">忘记密码</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+    </header>
     @RenderBody()
 </body>
 
