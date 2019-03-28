@@ -8,8 +8,52 @@
     <meta charset="utf-8" />
     <title>注册·一起帮</title>
     <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    
+
     <style type="text/css">
+        header {
+            height: 60px;
+            border: 1px;
+            z-index: 1130;
+            top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            border-radius: 4px 5px;
+        }
+        .form-controls {
+            display: block;
+            width:30%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px 5px;
+        }
+        .clear{
+            clear:both;
+        }
+        .padding{
+            padding:10px;
+        }
+       
+        .secoond-color{
+            color:white;
+        }
+        .highlight {
+            background-color: #ffffe0;
+            border: 2px dashed #eee;
+            border-radius: 4px 5px;
+        }
+
         a {
             text-decoration: none
         }
@@ -17,6 +61,7 @@
         * {
             margin-top: 0;
         }
+
         .flag {
             z-index: 100;
             position: fixed;
@@ -29,14 +74,17 @@
         .text-center {
             text-align: center;
         }
+
         .widget {
             border: 1px dashed #eee;
             padding: 15px;
             margin-bottom: 30px;
             word-break: break-all;
-            background-color: #fff;
+            border-radius:5px;
         }
-
+        .margin-top{
+            margin-top:40px;
+        }
         .form {
             display: block;
             padding: 6px 12px;
@@ -46,7 +94,28 @@
             border-radius: 4px;
         }
 
+        .input-group .form-control {
+            position: relative;
+            z-index: 2;
+            float: left;
+            width: 100%;
+            margin-bottom: 0;
+        }
 
+        .help-feedback a{
+            border: 0px;
+            background-color: rgba(128,255,212,.7);
+            color: #23527c;
+            position: fixed;
+            bottom: 100px;
+            right: 40px;
+            padding: 10px;
+            border-radius: 0px 10px;
+        }
+        .problem-style {
+            font-size: 14px;
+            background-color: #777
+        }
         .padding-top {
             padding-top: 10px;
         }
@@ -58,12 +127,10 @@
         }
 
         .color-blue {
-            color: blue;
+            color: #337ab7;
         }
 
-        .contain {
-            width: 1130px;
-        }
+
 
         .divider-line {
             border-bottom: 1px dashed;
@@ -97,16 +164,28 @@
             top: 0;
             background-color: aliceblue;
         }
-
+        .select {
+            border-left: 5px solid gray;
+            height: 20px;
+            margin-bottom: 30px;
+        }
         #logo {
             float: left;
             margin: 20px 50px;
         }
 
-        #notice {
-            margin-top: 92px;
+        .notice {
+            margin-top: 60px;
             clear: both;
-            background-color: lightgrey;
+            background-color: #eee;
+            height:20px;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
         }
 
         #input {
@@ -127,12 +206,9 @@
         }
 
         .length {
-            margin-bottom: 10px;
+            margin-left: 100px;
         }
 
-        contain {
-            width: 1130px;
-        }
 
         .dropdown {
             position: relative;
@@ -152,6 +228,13 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .text-bold {
+            font-weight: 600;
+        }
+
+        .text-color {
+            color: #337ab7;
+        }
 
         nav {
             float: right;
@@ -166,7 +249,9 @@
             nav li {
                 list-style: none;
             }
-
+        ol > li {
+            margin-bottom: 10px;
+        }
         footer {
             clear: both;
         }
@@ -202,23 +287,26 @@
     <header>
 
         <div id="logo">
-            <img src="~/images/logo-big.ico" style="float:left;margin-top:8px;">
 
-            <span style="float:left;margin-left:10px;margin-top:20px">
-                <span style="font-size:20px;font-weight:bolder;">一起帮</span><span>·网络互助平台</span>
-            </span>
+            <img src="~/images/logo-big.ico" alt="一起帮Logo" class="pull-left">
+
+            <span style="font-size:22px;font-weight:600">一起帮</span>
+            <span style="font-size:14px;font-weight:bolder;">·网络互助平台</span>
+
         </div>
-        <nav>
-            <ul style="cursor:pointer;margin-right:20px;float:right;margin-top:20px">
+
+
+        <nav style="cursor:pointer;margin-right:20px;float:right;margin-top:20px">
+            <ul>
                 <li class="dropdown">
-                    <span>求助 </span>
+                    <span class="glyphicon glyphicon-question-sign"></span><span>求助 </span>
                     <ul class="dropdown-content">
                         <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7"> 发布</a></li>
                         <li><a href="http://17bang.ren/Problem?excludeCanceled=true&excludeRewarded=true">列表</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <span>督促 </span>
+                    <span class="glyphicon glyphicon-eye-open"></span><span>督促 </span>
                     <ul class="dropdown-content">
                         <li><a href="http://17bang.ren/Log/On?prepage=%2fPlan%2fNew&role=%E7%99%BB%E5%BD%95%E7%94%A8%E6%88%B7">求督促</a></li>
                         <li><a href="http://17bang.ren/Plan">督促别人</a></li>
@@ -227,20 +315,20 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <span>文章 </span>
+                    <span class="glyphicon glyphicon-duplicate"></span><span>文章 </span>
                     <ul class="dropdown-content">
                         <li>列表</li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <span>APP下载 </span>
+                    <span class="glyphicon glyphicon-phone"></span><span>APP下载 </span>
                     <ul class="dropdown-content">
                         <li><a href="http://17bang.ren/install-Android.apk">Android</a></li>
                         <li><a href="http://17bang.ren/install-iOS.ipa">IOS</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <span>未登录</span>
+                    <span class="glyphicon glyphicon-circle-arrow-up"></span><span>未登录</span>
                     <ul class="dropdown-content">
                         <li><a href="http://17bang.ren/Log/On?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">登录</a></li>
                         <li><a href="http://17bang.ren/Register/Home?prepage=%2fProblem%3fexcludeCanceled%3dtrue%26excludeRewarded%3dtrue">注册</a></li>
@@ -256,25 +344,23 @@
 </body>
 
 </html>
-<footer class="contain" style="padding-top:20px">
-    <div id="links" style="clear:both;height:50px;">
-
-        <ul class="left" style=list-style-type:none>
-            <li>
-                <a href="http://17bang.ren/About/Us"> 关于我们</a>
-                <a href="http://17bang.ren/About/Us"> 常见问题</a>
-                <a href="http://17bang.ren/About/Us"> 意见建议</a>
-                <a href="http://17bang.ren/About/Us"> 历史通知</a>
-                <a href="http://17bang.ren/About/Us"> 友情捐赠</a>
-                <a href="http://17bang.ren/About/Us"> 融资2018</a>
-            </li>
-            <li>
-                <a href="http://17bang.ren/About/Us"> 友情链接:</a>
-            </li>
-        </ul>
+<footer class="container">
+    <div class="padding-top">
+        <a href="http://17bang.ren/About/Us">关于我们</a> |
+        <a href="http://17bang.ren/About/Us"> 常见问题</a> |
+        <a href="http://17bang.ren/About/Us"> 意见建议</a> |
+        <a href="http://17bang.ren/About/Us"> 历史通知</a> |
+        <a href="http://17bang.ren/About/Us"> 友情捐赠</a> |
+        <a href="http://17bang.ren/About/Us"> 融资2018</a> 
     </div>
+    <div>友情链接</div>
     <div style="float:right;margin-bottom:20px">
         <a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">渝ICP备18007191号（备案）</a><span>© 2019 - 首顾科技</span>
     </div>
+
+
+
 </footer>
+
+
 

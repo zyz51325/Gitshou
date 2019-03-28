@@ -4,12 +4,24 @@ using System.Text;
 
 namespace Gitshow
 {
-    class MaxArray
+    internal class Max
     {
-        internal int[] maxarray = new int[] { 1, 2, 3, 8, 677, 7, 5, 4 };
-    }
-    class ShowArray : MaxArray
-    {
-
+        internal static int GetMax(int[] showarray)
+        {
+            int max = showarray[0];
+            for (int i = 1; i < showarray.Length; i++)
+            {
+                if (showarray[i] >= max)
+                {
+                    Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{showarray[i]}");
+                    max = showarray[i];
+                }
+                else
+                {
+                    Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{max}");
+                }
+            }
+            return max;
+        }
     }
 }

@@ -3,26 +3,170 @@ using CQ = China.Chongqing;
 using TW = China.Taiwan;
 
 
-namespace home
+namespace Gitshow
 {
-    class Program
+    class Problem
     {
         static void Main(string[] args)
+        {
+            int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
 
-        //空间数组
+            Console.WriteLine("要查找的数：");
+            Check.Dichotomy(array);
+            Console.WriteLine();
+            Console.Read();
+        }
         //{
-        //    int[,] multiplearray = new int[4, 5];
-        //    for (int i = 0; i < 4; i++)
+        //    int[] array = new int[] { 5, 2, 8, 9, 1, 4, 7, 3, 6 };
+
+        //    int max;
+
+        //    for (int i = 0; i < array.Length - 1; i++)
         //    {
-        //        Console.WriteLine();
-        //        for (int j = 0; j < 5; j++)
+        //        for (int j = 0; j < array.Length - 1 - i; j++)
         //        {
-        //            multiplearray[i, j] = i + j;
-        //            Console.Write(multiplearray[i, j] + "   ");
+        //            if (array[j] > array[j + 1])
+        //            {
+        //                max = array[j];
+        //                array[j] = array[j + 1];
+        //                array[j + 1] = max;
+        //            }
         //        }
+        //    }
+        //    Console.Write("排列后的数组：");
+        //    for (int k = 0; k < array.Length; k++)
+        //    {
+        //        Console.Write(1/3*3);
         //    }
         //    Console.Read();
         //}
+
+
+
+        //{
+        //    CQ.Beauty 蒋勤勤 = new CQ.Beauty(168, 55, "蒋勤勤", true);
+        //    Console.WriteLine($"重庆美女{蒋勤勤.Name} 身高{蒋勤勤.Height}cm，体重{蒋勤勤.Weight}公斤，是否婚配：{蒋勤勤.Married}");//按.后自动显示参数
+
+        //    TW.Beauty 林志玲 = new TW.Beauty(166, 44, "林志玲", false);
+        //    Console.WriteLine($"台湾美女{林志玲.Name} 身高{林志玲.Height}cm，体重{林志玲.Weight}公斤，是否婚配：{林志玲.Married}");
+
+        //    Console.Read();
+
+        //}
+
+
+
+
+
+
+
+
+        //{
+        //    int length = 10;
+        //    int[] array = new int[length];
+        //    int i = 0;
+        //    array[0] = 2;
+        //    Console.Write("您要的数组为:" + array[0] + ",");
+        //   RanArray.RandomArray(array, i, length);
+        //    array[length - 1] = array[length - 2] + new Random().Next(1, 5);
+        //    Console.Write(array[length - 1] + "。");
+        //    Console.Read();
+        //}
+
+        //{
+        //    bool result;
+        //    Console.WriteLine("输入一个数：");
+        //    int i = Convert.ToInt32(Console.ReadLine());
+        //    Num_Double.Double(ref i, out result);
+        //    Console.WriteLine("数值为:" + i);
+        //    Console.WriteLine("事件为:" + result);
+        //    Console.ReadLine();
+        //}
+
+
+
+
+        //{
+        //    int guess = 0;
+        //    GyessGame.GuessGame(guess);
+
+        //}
+
+        //{
+        //    int a = 3;
+        //    int b = 5;
+
+        //    int t = NumberAdd.Add(a, b);
+        //    Console.WriteLine("相加结果为:t=" + t);
+        //    Console.Read();
+        //}
+
+
+        //{
+        //    float a = 3.7f;
+        //    float b = 5.2f;
+        //    Trade.Swap(ref a, ref b);              //ref 参数传递                                  //Show（array）;
+        //    Console.WriteLine("结果为:");
+        //    Console.WriteLine("a=" + a);                                              //Show(int[] array);
+        //    Console.WriteLine("b=" + b);
+        //    Console.Read();
+        //}
+
+
+        //{
+
+        //    Showarray showarray = new Showarray();
+        //    Console.WriteLine("数组为:1,2,3,8,677,7,5,4。");
+        //    GetMax(showarray.maxarray);
+        //    Console.Read();
+        //}
+        //static void Main(string[] args)
+        //{
+        //    string[,] array2D = new string[4, 2] { { "赵", "老赵" }, { "程", "老程" },
+        //                                { "龙", "小龙" }, { "金", "芦苇" }};
+        //    Console.WriteLine($"{array2D[4,2]}");
+        //    Console.Read();
+
+
+        //}
+
+        //{
+        //    Console.WriteLine("请输入第一个数");
+        //    int first = Convert.ToInt32(Console.ReadLine());
+        //    Console.WriteLine("请输入第二个数");
+        //    int second = Convert.ToInt32(Console.ReadLine());
+        //    float i = (float)first / second;
+        //    int j = (int)(i * 100);
+        //    i = (float)j / 100;
+        //    Console.WriteLine(i);
+        //    Console.Read();
+        //}
+        //{
+        //    Console.WriteLine("请输入一个数");
+        //   int i = Convert.ToInt32(Console.ReadLine());
+
+        //    if (i % 6 == 0)
+        //    {
+        //        Console.WriteLine("六六大顺");
+        //    }
+        //    else if (i % 8 == 0)
+        //    {
+        //        Console.WriteLine("发发发");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("大吉大利");
+        //    }
+        //    Console.Read();
+        //}
+        //{
+        //    float i =((23 + 7) * 12 - 8) / 6F;
+        //    int j = ((23 + 7) * 12 - 8) / 6;
+        //    Console.WriteLine(i-j);
+        //    Console.Read();
+        //}
+
+
 
 
 
@@ -32,7 +176,7 @@ namespace home
         //            school("yuanzhan");
         //        }
 
-
+        //空间数组
         //        {
         //            MultipleArray multiplearray = new MultipleArray();
 
@@ -53,14 +197,7 @@ namespace home
 
 
 
-        //求最大值
-        //{
 
-        //    ShowArray showarray = new ShowArray();
-        //    Console.WriteLine("数组为:1,2,3,8,677,7,5,4。");
-        //    GetMax(showarray.maxarray);
-        //    Console.Read();
-        //}
 
 
 
@@ -149,352 +286,101 @@ namespace home
 
 
 
-        //猜数字
-        //{
-        //    int guess = 0;
-        //    GuessGame(guess);
-        //}
 
 
 
 
 
 
-        //二分法
-        //{
-        //    int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
-
-        //    Console.WriteLine("要查找的数：");
-        //    Dichotomy(array);
-        //    Console.WriteLine();
-        //    Console.Read();
-        //}
 
 
 
-        //随机数组
-        //{
-        //    int length = 10;
-        //    int[] array = new int[length];
-        //    int i = 0;
-        //    array[0] = 2;
-        //    Console.Write("您要的数组为:" + array[0] + ",");
-        //    RandomArray(array, i, length);
-        //    array[length - 1] = array[length - 2] + new Random().Next(3, 16);
-        //    Console.Write(array[length - 1] + "。");
-        //    Console.Read();
-        //}
 
 
 
-        //数值翻倍
-        //{
-        //    bool result;
-        //    Console.WriteLine("输入一个数：");
-        //    int i = Convert.ToInt32(Console.ReadLine());
-        //    Double(ref i, out result);
-        //    Console.WriteLine("数值为:" + i);
-        //    Console.WriteLine("事件为:" + result);
-        //    Console.ReadLine();
-        //}
 
 
-        //数值相加
-        //{
-        //    int a = 3;
-        //    int b = 5;
-        //    int t = Add(a, b);
-        //    Console.WriteLine("相加结果为:t=" + t);
-        //    Console.Read();
-        //}
 
-        //美女比较
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        class MinicStack
         {
-            CQ.Beauty 蒋勤勤 = new CQ.Beauty(168, 55, "蒋勤勤", true);
-        Console.WriteLine($"重庆美女{蒋勤勤.Name} 身高{蒋勤勤.Height}cm，体重{蒋勤勤.Weight}公斤，是否婚配：{蒋勤勤.Married}");//按.后自动显示参数
-
-            TW.Beauty 林志玲 = new TW.Beauty(166, 44, "林志玲", false);
-        Console.WriteLine($"台湾美女{林志玲.Name} 身高{林志玲.Height}cm，体重{林志玲.Weight}公斤，是否婚配：{林志玲.Married}");
-
-            Console.Read();
-
-        }
-
-
-
-    //数值交换
-    //{
-    //    float a = 3.7f;
-    //    float b = 5.2f;
-    //    Swap(ref a, ref b);              //ref 参数传递                                  //Show（array）;
-    //    Console.WriteLine("结果为:");
-    //    Console.WriteLine("a=" + a);                                              //Show(int[] array);
-    //    Console.WriteLine("b=" + b);
-    //    Console.Read();
-    //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    static float Swap(ref float a, ref float b)
-{
-    float c;
-    c = a;
-    a = b;
-    b = c;
-    return a;
-}
-static int Add(int a, int b)
-{
-    return a + b;
-}
-static int Double(ref int i, out bool result)
-{
-    if (i > 0)
-    {
-        i = i * 2;
-        result = true;
-    }
-    else
-    {
-        i = 0;
-        result = false;
-    }
-    return i;
-}
-static int RandomArray(int[] array, int i, int length)
-{
-    while (i < length - 2)
-    {
-        i++;
-        array[i] = array[i - 1] + new Random().Next(3, 16);
-        Console.Write(array[i] + ",");
-    }
-    return array[i];
-}
-static int Dichotomy(int[] array)
-{
-    int index = array.Length - 1;
-    int input = Convert.ToInt32(Console.ReadLine());
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        if (input == array[index])
-        {
-            Console.WriteLine($"找到了,共查找了{i + 1}次，位置在{index + 1}：数值为{input}");
-            break;
-        }
-        else
-        {
-            Console.WriteLine($"第{i + 1}次查找，取第{index + 1}位值为{array[index]}");
-            if (input > array[index])
+            private int[] array = null;
+            private int top;
+            public MinicStack(int length)
             {
-                index = index + array.Length / (2 * (i + 1));
+                array = new int[length];
             }
-            else
+            internal void Push(int value)
             {
-                index = index - (array.Length - 1) / (2 * (i + 1));
+                Console.WriteLine($"{value}入栈");
+                array[top] = value;
+                top++;
+                Arrayshow.Inline(array);
+                Console.WriteLine();
+                Console.WriteLine("---------");
             }
-            Console.WriteLine($"设下一次查找位置为第{index + 1}位");
-
+            internal void Pop()
+            {
+                Console.WriteLine($"{array[top - 1]}出栈");
+                array[top - 1] = 0;
+                top--;
+                Arrayshow.Inline(array);
+                Console.WriteLine();
+                Console.WriteLine("--------");
+            }
         }
-    }
-    return index;
-}
-static int GetMax(int[] showarray)
-{
-    int max = showarray[0];
-    for (int i = 1; i < showarray.Length; i++)
-    {
-        if (showarray[i] >= max)
+
+        internal static class Arrayshow
         {
-            Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{showarray[i]}");
-            max = showarray[i];
+            internal static void On(int[] array)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.WriteLine(array[0]);
+                }
+            }
+
+            internal static void Inline(int[] array)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.Write(array[i] + " ");
+                }
+            }
         }
-        else
-        {
-            Console.WriteLine($"第{i}次比较，比较值为{showarray[i]},目前最大值为{max}");
-        }
-    }
-    return max;
-}
-static void GuessGame(int guess)
-{
-    int max = 100;
-    int random = new Random().Next(max);
-    for (int i = 0; i < 10; i++)
-    {
-        Console.WriteLine("输入一个数：");
-        int input = Convert.ToInt32(Console.ReadLine());
-        if (input == random)
-        {
-            Console.WriteLine("恭喜答对了！");
-            break;
-        }
-        else if (input > random)
-        {
-            Console.WriteLine($"太大了，只剩{9 - i}次了！");
-        }
-        else
-            Console.WriteLine($"太小了，只剩{9 - i}次了哦！");
-    }
-    if (guess != random)
-    {
-        Console.WriteLine($"错了，正确答案是{random}");
-    }
-    Console.ReadLine();
-}
-static void school(string name)
-{
-    Console.WriteLine("转换前的名称为：" + name);
-    char[] input = name.ToCharArray();
-    char[] output = new char[name.Length];
-    for (int i = 0; i < output.Length; i++)
-    {
-        output[i] = input[output.Length - 1 - i];
-    }
-    Console.Write("转换后名称为：");
-    Console.WriteLine(output);
-    Console.Read();
-}
-
 
     }
-
-
-    class Array
-{
-    internal int[,] array = new int[4, 5];
-}
-
-class MultipleArray : Array
-{
-
-}
-
-class Father
-{
-    protected int Money = 1000000;
-}
-
-class Mother
-{
-
-}
-class Child : Father
-{
-    internal int OwnMoney;
-    public Child()
-    {
-        OwnMoney = Money;
-    }
-
-}
-class Child2 : Father
-{
-    internal int OwnMoney = 500;
-
-}
-class GrandChild : Child
-{
-
-}
-
-
-class MinicStack
-{
-    private int[] array = null;
-    private int top;
-    public MinicStack(int length)
-    {
-        array = new int[length];
-    }
-    internal void Push(int value)
-    {
-        Console.WriteLine($"{value}入栈");
-        array[top] = value;
-        top++;
-        Arrayshow.Inline(array);
-        Console.WriteLine();
-        Console.WriteLine("---------");
-    }
-    internal void Pop()
-    {
-        Console.WriteLine($"{array[top - 1]}出栈");
-        array[top - 1] = 0;
-        top--;
-        Arrayshow.Inline(array);
-        Console.WriteLine();
-        Console.WriteLine("--------");
-    }
-}
-
-internal static class Arrayshow
-{
-    internal static void On(int[] array)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            Console.WriteLine(array[0]);
-        }
-    }
-
-    internal static void Inline(int[] array)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            Console.Write(array[i] + " ");
-        }
-    }
-}
-}
-
-namespace China.Chongqing
-{
-    struct Beauty
-    {
-        public int Height;
-        internal int Weight;
-        public string Name;
-        internal bool Married;
-
-        public Beauty(int height, int weight, string name, bool married)
-        {
-            Height = height;
-            Weight = weight;
-            Name = name;
-            Married = married;
-        }
-    }
-}
-
-
-namespace China.Taiwan
-{
-    struct Beauty
-    {
-        public int Height;
-        public int Weight;
-        public string Name;
-        internal bool Married;
-        public Beauty(int height, int weight, string name, bool married)
-        {
-            Height = height;
-            Weight = weight;
-            Name = name;
-            Married = married;
-        }
-    }
 }
 
 
@@ -512,16 +398,7 @@ namespace China.Taiwan
 
 
 
-//namespace China.meinv
-//{
-//    class Program
-//    {
 
-
-//        static void Main(string[] args)
-//        
-//    }
-//}
 
 
 

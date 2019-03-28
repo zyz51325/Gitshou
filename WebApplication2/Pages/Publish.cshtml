@@ -1,0 +1,154 @@
+﻿@page
+<div class="notice container">
+    <a href="http://17bang.ren/Message/Index" class="pull-right">全部消息</a>
+</div>
+<main class="container">
+    <div class="row">
+        <main class="col-md-9">
+            <div class="page-header">
+
+                <h1><span class="glyphicon glyphicon-question-sign"></span> 我要求助</h1>
+            </div>
+            <div class="highlight">
+
+                <p class="glyphicon glyphicon-info-sign"> 这是你第一次发布求助，求助发布成功系统会奖励你 20<a href=""> 帮帮点 </a>。</p>
+
+                <p class="glyphicon glyphicon-info-sign">
+                    你还没有<a href="#">自由发布权限</a>，为了保证求助的质量，我们会帮助你检查完善该求助内容，然后再公开显示，请耐心等待。<br />
+                    中途如有任何问题，工作人员会主动和你联系，请注意保持联系方式畅通。
+                </p>
+            </div>
+            <div class="clearfix">
+                <label class="pull-right checkbox-inline">
+                    <input type="checkbox"> 需要远程协助
+
+                </label>
+            </div>
+            <form role="form">
+                <div class="form-group">
+                    <label for="name">标题：（* 必填）</label>
+                    <input type="text" class="form-control" id="name"
+                           placeholder="简明扼要，不超过255字">
+                </div>
+                <div class="form-group">
+                    <label for="name">说明：（* 必填）</label>
+                    <textarea class="form-control" rows="18"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>关键字：（* 使用空格分隔）</label>
+                    <div class="input-group">
+
+                        <div class="input-group-btn">
+
+                            <button type="button" class="btn btn-default"
+                                    tabindex="-1">
+                                ---1级---
+                            </button>
+                            <button type="button" class="btn btn-default
+                              dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                <span class="caret"></span>
+                                <span class="sr-only">切换下拉菜单</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">功能</a></li>
+                                <li><a href="#">另一个功能</a></li>
+                                <li><a href="#">其他</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">分离的链接</a></li>
+                            </ul>
+                            
+                            <button type="button" class="btn btn-default"
+                                    tabindex="-1">
+                                ---2级---
+                            </button>
+                            <button type="button" class="btn btn-default
+                              dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                <span class="caret"></span>
+                                <span class="sr-only">切换下拉菜单</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">功能</a></li>
+                                <li><a href="#">另一个功能</a></li>
+                                <li><a href="#">其他</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">分离的链接</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control" placeholder="自定义关键字，使用空格分开">
+                    </div>
+                </div>
+                <div div class="form-group">
+
+                    <label>定向求助：（推荐 ）</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">@@</span>
+                        <input type="text" class="form-control" placeholder="输入你想求助的大神用户名">
+                    </div>
+
+                </div>
+                <div div class="form-group">
+                    <label>悬赏 帮帮币 ：（现有4枚 ）</label><label class="checkbox-inline"><input type="checkbox">据实结算</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">@@</span>
+                        <input type="text" class="form-control" placeholder="正整数，建议十枚以上">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary">发布</button>
+                    <button type="button" class="btn btn-default">保存</button>
+                    <a class="pull-right" href="http://17bang.ren/FAQ/Money#gain">如何获得"帮帮币"</a>
+                </div>
+            </form>
+        </main>
+        <aside class="col-lg-3">
+            <div class="widget highlight margin-top">
+                <h4><span class="glyphicon glyphicon-th-list"></span> 新手任务</h4>
+                <hr />
+                <label class="checkbox-inline">
+                    <input type="checkbox"> 填写：联系方式
+                </label>
+                <br />
+                <label class="checkbox-inline">
+                    <input type="checkbox">激活：Email
+                </label>
+                <br />
+                <label class="checkbox-inline">
+                    <input type="checkbox">邀请：我的小伙伴
+                </label>
+                <br />
+                <label class="checkbox-inline">
+                    <input type="checkbox"> 参加：新人测试
+                </label>
+                <br />
+                <label class="checkbox-inline">
+                    <input type="checkbox">发布：第一个求助
+                </label>
+                <br />
+                <label class="checkbox-inline">
+                    <input type="checkbox">尝试： 第一次协助
+                </label>
+                <br />
+                <label class="checkbox-inline">
+                    <input type="checkbox"> 获得：若干 帮帮币
+                </label>
+                <br />
+            </div>
+        </aside>
+
+
+
+
+        <div class="clearfix">
+            <a class="pull-right" href="#">修改</a>
+        </div>
+        <br />
+        
+
+        <div class="help-feedback">
+            <a style="bottom:100px;" href="http://17bang.ren/Contact/Us">帮助</a>
+            <a style=" bottom:55px;" href="http://17bang.ren/Suggest/New">反馈</a>
+        </div>
+    </div>
+
+</main>
+
