@@ -1,45 +1,48 @@
 ﻿@page
 <script>
 
-    ////使用setTimeout() （不是setInterval() ）实现每隔1秒钟依次显示：第n周，源栈同学random人。（n逐次递增，random随机）
-    //var num = 0;
-    //for (var i = 1; i < 100; i++) {
-    //    num = Math.floor(100 * Math.random());
-    //    setTimeout(function () { alert("第" + i + "周，源栈同学" + num + "人") }, 1000)
-    //}
-
-
-
-    //完成猜数字的游戏：
-    //弹出游戏玩法说明，等待用户点击“确认”，开始游戏；
-    //浏览器生成一个不大于1000的随机正整数；
-    //用户输入猜测；
-    //如果用户没有猜对，浏览器比较后告知结果：“大了”或者“小了”。如果用户：
-    //只用了不到6次就猜到，弹出：碉堡了！
-    //只用了不到8次就猜到，弹出：666！
-    //用了8 - 10次猜到，弹出：猜到了。
-    //用了10次都还没猜对，弹出：^ (*￣(oo) ￣)^
-    var num = Math.floor(1000 * Math.random());
-    confirm('你准备好了吗？');
-    var guess = prompt('请输入一个不大于1000的正整数');
-    for (var i = 1; i < 11; i++) {
-
-        if (guess > num) {
-            alert('大了');
-            guess = prompt('请输入一个不大于1000的正整数');
-        } else if (guess < num) {
-            alert('小了');
-            guess = prompt('请输入一个不大于1000的正整数');
+    //使用setTimeout() （不是setInterval() ）实现每隔1秒钟依次显示：第n周，源栈同学random人。（n逐次递增，random随机）
+    function luckyStack(){
+        function stack() {
+            for (let n = 1; n < 100; n++) {
+                var num = Math.floor(100 * Math.random());
+                setTimeout(function () { alert("第" + i + "周，源栈同学" + num + "人") }, 1000)
+            }
+            stack();
         }
+        luckyStack();
 
-        else {
-            if (i < 6) { alert('碉堡了！'); }
-            else if (6 <= i < 8) { alert('666!'); }
-            else if (8 <= i < 10) { alert('猜到了'); }
-            else { alert('^ (*￣(oo) ￣)^');}
-        }
 
-    }
+        ////完成猜数字的游戏：
+        ////弹出游戏玩法说明，等待用户点击“确认”，开始游戏；
+        ////浏览器生成一个不大于1000的随机正整数；
+        ////用户输入猜测；
+        ////如果用户没有猜对，浏览器比较后告知结果：“大了”或者“小了”。如果用户：
+        ////只用了不到6次就猜到，弹出：碉堡了！
+        ////只用了不到8次就猜到，弹出：666！
+        ////用了8 - 10次猜到，弹出：猜到了。
+        ////用了10次都还没猜对，弹出：^ (*￣(oo) ￣)^
+        //var num = Math.floor(1000 * Math.random());
+        //confirm('你准备好了吗？');
+        //var guess = prompt('请输入一个不大于1000的正整数');
+        //for (var i = 1; i < 11; i++) {
+
+        //    if (guess > num) {
+        //        alert('大了');
+        //        guess = prompt('请输入一个不大于1000的正整数');
+        //    } else if (guess < num) {
+        //        alert('小了');
+        //        guess = prompt('请输入一个不大于1000的正整数');
+        //    }
+
+        //    else {
+        //        if (i < 6) { alert('碉堡了！'); }
+        //        else if (6 <= i < 8) { alert('666!'); }
+        //        else if (8 <= i < 10) { alert('猜到了'); }
+        //        else { alert('^ (*￣(oo) ￣)^'); }
+        //    }
+
+        //}
 
 
 
