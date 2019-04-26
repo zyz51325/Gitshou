@@ -1,0 +1,258 @@
+﻿@page
+<script>
+
+    ////使用setTimeout() （不是setInterval() ）实现每隔1秒钟依次显示：第n周，源栈同学random人。（n逐次递增，random随机）
+    //var num = 0;
+    //for (var i = 1; i < 100; i++) {
+    //    num = Math.floor(100 * Math.random());
+    //    setTimeout(function () { alert("第" + i + "周，源栈同学" + num + "人") }, 1000)
+    //}
+
+
+
+    //完成猜数字的游戏：
+    //弹出游戏玩法说明，等待用户点击“确认”，开始游戏；
+    //浏览器生成一个不大于1000的随机正整数；
+    //用户输入猜测；
+    //如果用户没有猜对，浏览器比较后告知结果：“大了”或者“小了”。如果用户：
+    //只用了不到6次就猜到，弹出：碉堡了！
+    //只用了不到8次就猜到，弹出：666！
+    //用了8 - 10次猜到，弹出：猜到了。
+    //用了10次都还没猜对，弹出：^ (*￣(oo) ￣)^
+    var num = Math.floor(1000 * Math.random());
+    confirm('你准备好了吗？');
+    var guess = prompt('请输入一个不大于1000的正整数');
+    for (var i = 1; i < 11; i++) {
+
+        if (guess > num) {
+            alert('大了');
+            guess = prompt('请输入一个不大于1000的正整数');
+        } else if (guess < num) {
+            alert('小了');
+            guess = prompt('请输入一个不大于1000的正整数');
+        }
+
+        else {
+            if (i < 6) { alert('碉堡了！'); }
+            else if (6 <= i < 8) { alert('666!'); }
+            else if (8 <= i < 10) { alert('猜到了'); }
+            else { alert('^ (*￣(oo) ￣)^');}
+        }
+
+    }
+
+
+
+    ////用JavaScript弹出你的入栈口号
+    //alert("年薪百万不是梦")
+
+
+    ////利用JavaScript计算出：[(23 + 7)x12 - 8]÷6的值
+    //var num = ((23 + 7) * 12 - 8) / 6;
+    //alert(num)
+
+
+    ////利用循环，计算出1 + 3 + 5 + 7 +...+99=?
+    //var num = 0;
+    //for (var i = 1; i < 100; i += 2) {
+    //    num += i;
+    //}
+    //console.log(num)
+
+
+    ////将源栈同学姓名 / 昵称装入数组，再根据该数组输出共有多少同学
+    //var arr = ["芦苇", "老赵", "老程", "子祥", "文轩", "两开花", "彩玲", "明辉", "四喜丸子"];
+    //alert(`源栈学生总共 ${arr.length}人。`);
+
+    ////在上述数组头部加上小鱼老师，末尾加上大飞哥
+    //arr.push("大飞哥");
+    //arr.unshift("小雨老师");
+    //alert(arr);
+
+
+    ////如果一个数只能被1和它自己整除，这个数就被称之为“素数”。请找出100以内的所有素数。
+    ////然后封装成一个函数findPrime(max) ，可以返回max以内的所有素数。
+    //function findPrime(max) {
+    //    var prime = [];
+    //    for (var i = 1; i < max; i++) {
+    //        if (isPrime(i)) {
+    //            prime.push(i);
+    //        }
+
+    //    }
+    //    return prime;
+    //}
+    //    function isPrime(num){
+    //    var mpf = Math.floor(Math.sqrt(i)) + 1;
+    //    for (var j = 2; j < mpf; j++) {
+    //        if (i % j === 0) {
+    //            return false;
+    //        }
+    //    }
+    //}
+    //alert(findPrime(max));
+
+    ////建立一个函数getMaxNumber() ，可以接受任意多各种类型（整数、小数、正数、负数、字符串、布尔值等）的参数，并找出里面最大的数（忽略其他类型）
+
+    //function getMaxNumber() {
+    //    var num;
+    //    for (let i = 0; i < arguments.length; i++) {
+    //        if (typeof arguments[i] === 'number') {
+    //            if (arguments[i + 1] > arguments[i]) {
+    //                num = arguments[i + 1];
+    //            }
+    //        }
+    //    }
+    //    alert('最大值为'+num)
+    //}
+    //getMaxNumber(3, '3', 3, -4, 9.6, '两开花', 'BC',true, null, undefined, NaN);
+
+
+    ////删除一个数组里面重复的元素
+    //var arr = [3, '3', 3, -4, 9.6, '两开花', 'BC', true, null, undefined, NaN];
+
+
+
+    ////使用JavaScript内置字符串函数，处理 “‘源栈’：飞哥小班教学，线下免费收看” ：“飞哥”改成“大神”，“线下”改成“线上”。
+    //var luckyStack = '飞哥小班教学，线下免费收看';
+
+    //luckyStack = luckyStack.replace('飞哥小班教学，线下免费收看', '大神小班教学，线上免费收看');
+    //alert(luckyStack);
+
+
+
+    ////将数组['why', 'gIT', 'vs2019', 'community', 'VERSION']规范化，所有字符串：
+    ////首字母大写开头，其他字母小写
+    ////截去超过6个字符的部分，如'community'将变成'Commun'
+    //var arr = ['why', 'gIT', 'vs2019', 'community', 'VERSION'];
+    //for (var i = 0; i < arr.length; i++) {
+    //    arr[i] = arr[i].toLowerCase();
+    //    arr[i] = arr[i][0].toUpperCase() + arr[i].substring(1);
+    //    arr[i] = arr[i].substring(0, 6);
+
+    //}
+    //alert(arr);
+
+
+    ////创建一个函数getRandomArray(length, max) ，能返回一个长度不大于length，每个元素值不大于100随机整数数组。
+    //function getRandomArray(length) {
+    //    var arr = [];
+    //    for (var i = 0; i < length; i++) {
+    //       a=arr.push[Math.floor(100 * Math.random())];
+    //    }
+    //    return a;
+    //}
+
+
+    //不使用JavaScript内置函数，将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
+    //var text = 'hello,yuanzhan';
+    //var newtext = 'hello,yuanzhan';
+    //for (var i = 0; i < text.length; i++) {
+
+    //  newtext[i] = text[text.length-1 - i];
+    //}
+    //alert(newtext[i]);
+
+
+
+    //document.write(str + '<br />');
+    //document.write(usernameMi + '<br />');
+
+
+
+    //统计出这段文字中有多少个单词：
+    //There are two ways to create a RegExp object: a literal notation and a constructor.
+    //To indicate strings, the parameters to the literal notation do not use quotation marks
+    //while the parameters to the constructor function do use quotation - marks.So the following
+    //expressions create the same regular expression
+
+    //var username = "There are two ways to create a RegExp object : a literal notation and a constructor. To indicate strings , the parameters to the literal notation do not use quotation marks while the parameters to the constructor function do use quotation-marks. So the following expressions create the same regular expression";
+    //for (var i = username.length - 1; i >= 0; i--) {
+    //    var str = username.charAt(i);
+    //    var code = str.charCodeAt();
+    //    usernameMi += code;
+    //}
+    ////编写一个计算源栈返还红包金额的函数 Redbag() ，参考：
+
+
+
+
+
+    ////在函数yz.fei.get986()中嵌入不带参数的函数has9()/has8()/has6()，
+    ////并调用上述函数，找出10000以内有多少个数字包含：9或者8或者6。
+    //var yz = {};
+    //yz.fg = {};
+    //yz.fg.get986 = function () {
+    //    var i = 0, j = 0;
+    //    function has9() {
+    //        if (i.tostring().indexOf(9) !== -1) {
+    //            return true;
+    //        } else {
+    //          function  has8() {
+    //                if (i.tostring().indexOf(8) !== -1) {
+    //                    return true;
+    //                } else {
+    //                  function  has6(){
+    //                        if (i.tostring().indexOf(6) !== -1) {
+    //                            return true;
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        for (var i = 0; i < max; i++) {
+    //            if (has8() || has9() || has6())
+    //                j += 1;
+    //        }
+    //        return j;
+    //    }
+    //    alert(yz.fg.get986(100));
+
+
+    ////    在函数student()中声明了函数域变量name、age和female，使用闭包机制，将其暴露到函数外部
+    //function students() {
+    //    var name = '两开花', age = 18, female = true;
+    //    var arr = [name, age, female];
+    //    return function () {
+    //        return arr;
+    //    }
+    //}
+    //var long = students()();
+    //for (var i = 0; i < long.length; i++) {
+    //    console.log(long[i]());
+    //}
+
+    ////    解释以下代码运行结果：
+        //function foo(x) {
+        //    var tmp = 3;
+        //    return function (y) {
+        //        x = x ? x + 1 : 1;
+        //        console.log(x + y + tmp);
+        //    }
+        //}
+
+        //var bar = foo(-1);
+        ////或者：var bar = foo(1);
+        ////或者：var bar = foo(0);
+
+        //bar(10);
+
+
+        ////改动以下代码，让其输出如图所示，并说明理由。
+        //        function buildList(list) {
+        //            var result = [];
+        //            for (let i = 0; i < list.length; i++) {
+        //            result.push(function () {
+        //                console.log('item' + i + ': ' + list[i])
+        //            });
+        //        }
+        //        return result;
+        //    }
+
+        //        (function() {
+        //            var fnlist = buildList([1, 2, 3]);
+        //            for (var j = 0; j < fnlist.length; j++) {
+        //            fnlist[j]();
+        //            }
+        //    })();
+</script>

@@ -1,0 +1,2 @@
+﻿INSERT INTO Tproblem VALUES(N'老赵','1234',1)
+INSERT Tproblem VALUES('LUWEI','6666',6)

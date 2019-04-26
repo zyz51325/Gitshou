@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gitshow", "Gitshow\Gitshow.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "前端", "WebApplication2\前端.csproj", "{BD9F701F-CD59-4483-A8B2-0D5D1F6C96B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL", "..\SQL\SQL\SQL.csproj", "{AFFADAFB-2618-4177-A150-F8BB09EEA78C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQL", "..\SQL\SQL\SQL.csproj", "{AFFADAFB-2618-4177-A150-F8BB09EEA78C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "js3", "js3\js3.csproj", "{61E84A7C-351B-4755-8A65-545E4F754271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AFFADAFB-2618-4177-A150-F8BB09EEA78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFFADAFB-2618-4177-A150-F8BB09EEA78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFFADAFB-2618-4177-A150-F8BB09EEA78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E84A7C-351B-4755-8A65-545E4F754271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E84A7C-351B-4755-8A65-545E4F754271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E84A7C-351B-4755-8A65-545E4F754271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E84A7C-351B-4755-8A65-545E4F754271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
