@@ -2,15 +2,20 @@
 <script>
 
     //使用setTimeout() （不是setInterval() ）实现每隔1秒钟依次显示：第n周，源栈同学random人。（n逐次递增，random随机）
-  
+    function stack() {
+        let n = 1;
         function luckyStack() {
-            for (let n = 1; n < 100; n++) {
-                var num = Math.floor(100 * Math.random());
-                setTimeout(function () { alert("第" + n + "周，源栈同学" + num + "人") }, 1000)
-            }
+
+            let num = Math.floor(100 * Math.random());
+            console.log(`第${n}周，源栈同学${num}人`);
+            setTimeout(luckyStack, 1000);
+            n++;
         }
+
         luckyStack();
-  
+    }
+    stack();
+
 
 
         ////完成猜数字的游戏：
