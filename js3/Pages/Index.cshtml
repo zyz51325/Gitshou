@@ -1,20 +1,290 @@
 ﻿@page
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <h2>万紫千红</h2>
+    <span class="glyphicon glyphicon-heart"></span>
+
+</body>
+</html>
 <script>
+    'use strict';
 
-    //使用setTimeout() （不是setInterval() ）实现每隔1秒钟依次显示：第n周，源栈同学random人。（n逐次递增，random随机）
-    function stack() {
-        let n = 1;
-        function luckyStack() {
+    ////参考求助首页侧边栏关键字，实现：当鼠标移动到关键字上，显示关键字被使用次数
 
-            let num = Math.floor(100 * Math.random());
-            console.log(`第${n}周，源栈同学${num}人`);
-            setTimeout(luckyStack, 1000);
-            n++;
+    //var num = document.getElementById('KeyWord').getElementsByTagName('a');
+
+    //for (let i = 0; i < btns.length; i++) {
+
+    //    num[i].onmouseover = function () {
+    //        console.log('该关键字被使用' + num[i].getAttribute('data-used') + '次。');
+    //    }
+    //}
+
+
+    //参考文章的全系列阅读功能，当滚动到页面底部时，将页面现有内容粘贴到页面底部，
+    //直到5次过后，在页面底部显示：已经没有更多内容了
+
+
+    ////参考消息页面：完成勾选全选功能
+    //for (var i = 0; i < document.getElementsByClassName('col-xs-2 col-sm-1'); i++) {
+
+    //    if (typeof document.getElementsByClassName('col-xs-2 col-sm-1')[i].children[0].checked === "boolean") {
+    //        if (document.getElementsByTagName('input')[0].checked === true) {
+    //            document.getElementsByClassName('col-xs-2 col-sm-1')[i].children[0].checked === true;
+    //        } else {
+    //            document.getElementsByClassName('col-xs-2 col-sm-1')[i].children[0].checked === false;
+    //        }
+
+    //    }
+    //}
+
+    ////参考注册页面：
+
+    ////提交时，如果用户名重复（已有用户名用数组保存），阻止form提交，提示“用户名重复”。
+    ////重新输入用户名，一旦输入用户名部分没有重复
+    ////当用户名或密码等有值时，关闭页面前弹出确认框
+    //var hasarr = [];
+    //if (document.getElementsByTagName('input')[1].value in hasarr) {
+    //    document.getElementsByTagName('input')[6].checked = false;
+    //    alert('用户名重复');
+    //} else { document.getElementsByTagName('input')[6].checked = true; }
+
+
+
+    ////参考求助首页侧边栏“免费广告发布”弹出Modal，实现（不需要弹出Modal）：
+
+
+
+    ////根据下拉列表选中项，填充“文字内容”和“链接”文本框
+    ////勾选修改的checkbox，实现“文字内容”和“链接”文本框的禁用和启用
+    ////参考发布求助，实现其关键字功能：
+    //document.getElementsByTagName('select')[0].selectedIndex
+
+    //if (document.getElementById('Content_Edit').checked === true) {
+    //    document.getElementsByClassName('form-control')[2].readOnly === true;
+    //    document.getElementsByClassName('form-control')[3].readOnly === true;
+    //}else {
+    //    document.getElementsByClassName('form-control')[2].readOnly === false;
+    //    document.getElementsByClassName('form-control')[3].readOnly === false;
+    //}
+
+
+    //没有选择一级关键字，不能选择二级关键字
+    //选择一级关键字后，二级关键字只能是一级关键字下的子集
+    //一级关键字和二级关键字被选中后，会显示在下拉列表上方
+    //自定义关键字输入完成后（按空格键），输入的关键字显示在下拉列表上方
+    //后输入的关键字显示在前面
+    //function firstfloor(first) {
+    //    var first =
+    //        document.getElementsByName('select')[0].selectedIndex
+    //    function secondfloor(second) {
+    //        document.getElementsByName('select')[1].selectedIndex
+    //    }
+    //    secondfloor();
+    //}
+    //firstfloor();
+
+
+
+
+    ////实现铃铛（没有学bootstrap的同学用文字代替）闪烁效果
+    function lightstar() {
+        if (document.getElementsByTagName('span')[0].style.color === 'darkblue') {
+            document.getElementsByTagName('span')[0].style.color = 'lightblue';
+        } else if (document.getElementsByTagName('span')[0].style.color === 'lightblue') {
+            document.getElementsByTagName('span')[0].style.color = 'darkblue';
         }
-
-        luckyStack();
     }
-    stack();
+    setInterval(lightstar, 1000);
+
+
+
+    //模拟求助首页，并：
+
+
+    ////统计有多少个悬赏大于1的求助
+
+    //var result = document.getElementsByClassName('visible-sm-inline visible-md-inline visible-lg-inline');
+    //for (var i = 0; i < result.length; i++) {
+
+    //    if (result[i].innerText === "悬赏：") {
+    //        var num = 0;
+    //        if (result[i].parentNode.nextSibling.nextSibling.innerText > 1) {
+    //            num++;
+    //            console.log('悬赏大于1的求助共有' + num + '个。')
+    //        }
+
+    //    }
+    //}
+
+
+
+
+
+    ////将状态为“协助中”的求助背景改成灰黑色
+    (function() {
+        for (var i = 0; i < document.getElementsByClassName('problem-status label-info').length; i++) {
+
+            if (document.getElementsByClassName('problem-status label-info')[i].innerText === '协助中') {
+                document.getElementsByClassName('problem-status label-info')[i].
+                    parentNode.parentNode.parentNode.style.backgroundcolor = 'darkblack';
+            }
+        }
+    })();
+
+
+    //写一个函数，可以统计某个求助使用了多少关键字
+    if (typeof document.getElementsByClassName('fa fa-tags ')[i].getElementsByTagName('a')[0].innerText === "string") {
+        document.getElementsByClassName('badge badge-has-used')[0].parentNode
+    }
+
+
+
+    //如果总结数为0，将其从DOM树中删除
+
+
+
+    ////参考用户注册页面，创建一下函数：
+    ////显示密码的长度
+    ////如果密码和确认密码不一致，弹出提示
+    //(function() {
+    //    document.getElementsByTagName('input')[4].value.length;
+
+    //    if (document.getElementsByTagName('input')[3].value !== document.getElementsByTagName('input')[4].value) {
+    //        alert('两次密码不一致')
+    //    }
+    //    else {
+    //    alert( '登录成功') }
+    //})();
+
+
+
+    ////参考用户资料页面，控制台显示出用户的：性别 / 出生年月 / 关注（关键字）/ 自我介绍
+    //document.getElementsByTagName('input')[2].checked === true;
+    //document.getElementsByTagName('select')[0].children[20];
+    //document.getElementsByTagName('select')[1].children[2];
+    //document.getElementsByTagName('select')[2].children[5];
+    //document.getElementsByTagName('textArea')[0].value === '我是两开花';
+
+
+
+
+
+    //function greet() {
+    //    alert('hello,源栈');
+    //}
+    //setTimeout(greet, 3000);
+    //function closureRiddle() {
+    //    var arr = [];
+    //    for (var i = 0; i < 5; i++) {
+    //        arr[i] = function () {     //数组的元素为i个函数，不会进方法内,i=4加1成5后跳到15步
+    //            return i;
+    //        };
+    //    }
+    //    return arr;
+    //}
+    //var results = closureRiddle();       //执行，调用第5步函数
+    //for (var i = 0; i < results.length; i++) {
+    //    console.log(`第${results[i]()}次显示`);
+    //}
+
+
+
+    //function luckyStack() {
+    //var _price = 986;
+    //    return function () {
+    //        return _price;
+    //    }
+    //}
+    //var getPrice = luckyStack();
+    //alert(`"源栈"培训的价格是每周${getPrice()}元！`);
+
+
+
+
+    ////模拟名称空间：随着JavaScript规模扩大，一个项目可能引用多个类库，这样可以避免名称冲突
+    //var yz = {};
+    //yz.cq = {};
+    //yz.cq.base = {
+    //    name='源栈重庆总部'
+    //};
+    //alert(yz.cq.base.name);
+
+
+
+
+    //function blockScope() {
+    //    if (true) {
+    //        let  i = 986;
+    //        i = 100;
+
+    //    }
+    //    console.log('i=' + i);
+    //    //let具有块级作用域
+    //    //变量作用于整个函数，即if(true) {
+    //    //    var i = 986;
+    //    //}
+    //    //console.log('i=' + i); 而不是块级作用域{
+    //    //    var i = 986;
+    //    //}
+    //}
+    //blockScope();
+
+    //var name = "飞哥";
+    //function smart() {
+    //    //var name = '子祥';
+    //    alert(`${name}最帅`);
+    //}
+    ////smart();
+
+    //function reallySmart() {
+
+
+    //    smart();
+    //    name = '子祥';
+    //}
+    //reallySmart();
+
+
+    //function a(name) {
+    //    var age = 50;
+    //    //var name = '两开花';
+    //    function b() {
+    //        name = '老程';
+    //        gender = true;
+    //        alert(name+age+gender);
+
+    //    };
+
+    //    b();
+    //    age = 200;
+    //    alert(gender);
+
+    //}
+
+    //a('飞哥');
+
+
+
+
+    ////使用setTimeout() （不是setInterval() ）实现每隔1秒钟依次显示：第n周，源栈同学random人。（n逐次递增，random随机）
+    //function stack() {
+    //    let n = 1;
+    //    function luckyStack() {
+
+    //        let num = Math.floor(100 * Math.random());
+    //        console.log(`第${n}周，源栈同学${num}人`);
+    //        setTimeout(luckyStack, 1000);
+    //        n++;
+    //    }
+
+    //    luckyStack();
+    //}
+    //stack();
 
 
 
